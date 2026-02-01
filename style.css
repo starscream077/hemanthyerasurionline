@@ -1,57 +1,55 @@
 :root {
-  --bg: #0f172a;
-  --card: #111827;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
+  --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --glass: rgba(255, 255, 255, 0.08);
   --accent: #38bdf8;
+  --text: #e5e7eb;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
 }
 
 .hero {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #020617, #0f172a);
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-}
-
-.hero h2 {
+.subtitle {
   color: var(--accent);
-  margin-top: 0.5rem;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: 1.5rem auto;
-  color: var(--muted);
-}
-
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  font-weight: 600;
 }
 
 .btn {
-  padding: 0.6rem 1.2rem;
   border: 1px solid var(--accent);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   color: var(--accent);
   text-decoration: none;
-  border-radius: 6px;
 }
 
 .btn.primary {
@@ -59,50 +57,44 @@ body {
   color: #020617;
 }
 
-main {
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  margin: 3rem auto;
+  padding: 2rem;
   max-width: 1000px;
-  margin: auto;
-  padding: 3rem 2rem;
+  border-radius: 16px;
 }
 
-section {
-  margin-bottom: 3rem;
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+.skill {
+  padding: 0.5rem 0.9rem;
+  background: rgba(56,189,248,0.15);
+  border-radius: 999px;
+  animation: float 4s ease-in-out infinite;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
 }
 
-.card {
-  background: var(--card);
+.card, .project {
+  background: rgba(0,0,0,0.35);
   padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.card span {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-ul {
-  margin-top: 0.8rem;
-  padding-left: 1.2rem;
-}
-
-.certs li {
-  margin-bottom: 0.5rem;
+  border-radius: 12px;
+  margin: 1rem auto;
+  max-width: 900px;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  color: var(--muted);
+  opacity: 0.7;
 }
