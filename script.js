@@ -1,1 +1,2 @@
-// Reserved for future enhancements (animations, dark/light toggle, etc.)
+// Future: scroll animations, theme toggle, dynamic projects
+console.log("Personal brand site loaded");
