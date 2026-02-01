@@ -1,0 +1,108 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h2 {
+  color: var(--accent);
+  margin-top: 0.5rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #020617;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+ul {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.certs li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted);
+}
