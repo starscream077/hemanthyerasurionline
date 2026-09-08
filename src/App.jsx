@@ -15,6 +15,7 @@ const Portfolio = () => {
   };
 
   const certifications = [
+    [cite_start]{ title: "Generative AI Leader", date: "2026", color: "from-purple-400 to-indigo-500", icon: <Cpu /> },
     [cite_start]{ title: "LF Certified Kubestronaut", date: "2025", color: "from-yellow-400 to-orange-500", icon: <Award /> }, // [cite: 56]
     [cite_start]{ title: "CKS: Security Specialist", date: "2024", color: "from-red-500 to-pink-600", icon: <Shield /> }, // [cite: 58]
     [cite_start]{ title: "CKA: Administrator", date: "2022", color: "from-blue-400 to-cyan-500", icon: <Server /> }, // [cite: 64]
@@ -26,10 +27,10 @@ const Portfolio = () => {
   const experience = [
     {
       company: "Verizon Data Services",
-      role: "Engineer III Csit-Cloud",
+      role: "Sr Engr Cslt-Cloud",
       [cite_start]period: "Sep 2023 - Current", // [cite: 12, 13, 14, 15]
-      [cite_start]desc: "Troubleshooting large scale OpenShift clusters. Building CI/CD automations using GitLab, Prometheus, and Grafana.", // [cite: 16, 17, 18]
-      tech: ["OpenShift", "ArgoCD", "Python"]
+      [cite_start]desc: "Building and managing large scale openshift clusters by leveraging network automations, troubleshooting tenant issues, performing RCA analysis.", // [cite: 16, 17, 18]
+      tech: ["OpenShift", "F5", "NetApp"]
     },
     {
       company: "Nokia Solutions",
