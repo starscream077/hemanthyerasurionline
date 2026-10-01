@@ -103,7 +103,7 @@ const Portfolio = () => {
       <nav className="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
-            HY.
+            <a href="https://hemanthyerasuri.online/" aria-label="HY home">HY.</a>
           </h1>
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 text-sm font-semibold tracking-wide">
@@ -115,9 +115,26 @@ const Portfolio = () => {
             <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
           </div>
           {/* Mobile Menu Toggle */}
-          <button className="md:hidden" onClick={() => setIsNavOpen(!isNavOpen)}>
+          <button
+            className="md:hidden"
+            onClick={() => setIsNavOpen(!isNavOpen)}
+            aria-label={isNavOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isNavOpen}
+            aria-controls="mobile-navigation"
+          >
             {isNavOpen ? <X /> : <Menu />}
           </button>
+        </div>
+        <div
+          id="mobile-navigation"
+          className={`${isNavOpen ? "block" : "hidden"} md:hidden border-t border-slate-800 px-6 pb-4`}
+        >
+          <a href="#about" onClick={() => setIsNavOpen(false)} className="block py-3 text-sm font-semibold hover:text-cyan-400 transition">About</a>
+          <a href="#skills" onClick={() => setIsNavOpen(false)} className="block py-3 text-sm font-semibold hover:text-cyan-400 transition">Skills</a>
+          <a href="#experience" onClick={() => setIsNavOpen(false)} className="block py-3 text-sm font-semibold hover:text-cyan-400 transition">Experience</a>
+          <a href="#certs" onClick={() => setIsNavOpen(false)} className="block py-3 text-sm font-semibold hover:text-cyan-400 transition">Certifications</a>
+          <a href="#awards" onClick={() => setIsNavOpen(false)} className="block py-3 text-sm font-semibold hover:text-cyan-400 transition">Awards</a>
+          <a href="#contact" onClick={() => setIsNavOpen(false)} className="block py-3 text-sm font-semibold hover:text-cyan-400 transition">Contact</a>
         </div>
       </nav>
 
