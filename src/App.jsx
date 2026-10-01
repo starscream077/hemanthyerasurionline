@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Cloud, Server, Code, Shield, Cpu, Terminal, 
-  Award, Briefcase, Camera, Plane, Download, Menu, X 
+  Award, Briefcase, Camera, Plane, Download, Menu, X,
+  Linkedin, Github, Mail, BadgeCheck
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -111,6 +112,7 @@ const Portfolio = () => {
             <a href="#experience" className="hover:text-cyan-400 transition">Experience</a>
             <a href="#certs" className="hover:text-cyan-400 transition">Certifications</a>
             <a href="#awards" className="hover:text-cyan-400 transition">Awards</a>
+            <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
           </div>
           {/* Mobile Menu Toggle */}
           <button className="md:hidden" onClick={() => setIsNavOpen(!isNavOpen)}>
@@ -147,9 +149,9 @@ const Portfolio = () => {
               <a href="#experience" className="px-8 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold transition shadow-lg shadow-cyan-500/25">
                 View My Journey
               </a>
-              <button className="px-8 py-3 rounded-full border border-slate-600 hover:border-cyan-400 hover:text-cyan-400 transition flex items-center gap-2">
+              <a href="/Hemanth_Yerasuri.pdf" download className="px-8 py-3 rounded-full border border-slate-600 hover:border-cyan-400 hover:text-cyan-400 transition flex items-center gap-2">
                 <Download size={18} /> Download Resume
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
@@ -313,10 +315,36 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* --- CONTACT & SOCIAL PROFILES --- */}
+      <section id="contact" className="py-20 px-6 bg-slate-800/50 border-y border-slate-800">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-10">Let's Connect</h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="https://www.linkedin.com/in/hemanthyerasuri" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-slate-700 bg-slate-900/70 hover:border-cyan-400/70 hover:bg-slate-900 transition">
+              <Linkedin size={28} className="text-cyan-400 group-hover:scale-110 transition-transform" />
+              <span className="font-semibold">LinkedIn</span>
+            </a>
+            <a href="https://www.credly.com/users/hemanth-gopalakrishna-yerasuri/badges/credly" target="_blank" rel="noopener noreferrer" aria-label="Credly badges (opens in a new tab)" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-slate-700 bg-slate-900/70 hover:border-cyan-400/70 hover:bg-slate-900 transition">
+              <BadgeCheck size={28} className="text-amber-400 group-hover:scale-110 transition-transform" />
+              <span className="font-semibold">Credly Badges</span>
+            </a>
+            <a href="https://github.com/starscream077" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-slate-700 bg-slate-900/70 hover:border-cyan-400/70 hover:bg-slate-900 transition">
+              <Github size={28} className="text-white group-hover:scale-110 transition-transform" />
+              <span className="font-semibold">GitHub</span>
+            </a>
+            <a href="mailto:hemanthyerasuri@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Hemanth at hemanthyerasuri@gmail.com" className="group flex flex-col items-center gap-3 p-6 rounded-xl border border-slate-700 bg-slate-900/70 hover:border-cyan-400/70 hover:bg-slate-900 transition">
+              <Mail size={28} className="text-emerald-400 group-hover:scale-110 transition-transform" />
+              <span className="font-semibold">Email</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* --- FOOTER --- */}
       <footer className="py-8 text-center text-slate-500 text-sm bg-slate-950">
         <p>Hemanth Gopalakrishna Yerasuri © {new Date().getFullYear()}</p>
-        <p className="mt-2">Hyderabad, India • hemanth.krishna1@gmail.com</p>
+        <p className="mt-2">Hyderabad, India • hemanthyerasuri@gmail.com</p>
       </footer>
     </div>
   );
