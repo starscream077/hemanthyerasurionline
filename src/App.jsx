@@ -165,7 +165,7 @@ const Portfolio = () => {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-5xl px-6 lg:px-10">
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
+          <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-xs font-semibold tracking-wide text-cyan-200">
               <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
               Cloud &amp; Network Engineer <span className="text-slate-500">•</span> Hyderabad, India
@@ -176,12 +176,12 @@ const Portfolio = () => {
                 Yerasuri
               </span>
             </h1>
-            <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-300 md:text-xl">
+            <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-slate-300 md:text-xl">
               Cloud and network engineer building reliable telco platforms at scale.
               <span className="font-semibold text-white"> 9+ years</span> across OpenShift, Kubernetes, and network automation.
             </p>
             
-            <div className="mb-8 flex flex-wrap gap-4">
+            <div className="mb-8 flex flex-wrap justify-center gap-4">
               <a href="#experience" className="rounded-full bg-cyan-500 px-7 py-3 font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-400">
                 Explore experience
               </a>
