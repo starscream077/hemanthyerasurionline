@@ -32,8 +32,8 @@ const Portfolio = () => {
       period: "Sep 2023 - Current",
       desc: "Building and managing large scale openshift clusters by leveraging network automations, troubleshooting tenant issues, performing RCA analysis.",
       highlights: [
-        "Deployed 15+ large-scale clusters spanning 1,500+ nodes.",
-        "Managed and supported 240+ large-scale OpenShift clusters.",
+        "Deployed 15+ clusters spanning 1,500+ nodes.",
+        "Managed and supported 240+ OpenShift clusters.",
         "Improved troubleshooting and ticket resolution efficiency by 20% with custom Go scripts.",
         "Built reusable MOP templates, improving accuracy and consistency while generating documents 3× faster."
       ],
@@ -45,7 +45,7 @@ const Portfolio = () => {
       period: "Feb 2018 - Aug 2023",
       desc: "E2E design and deployment of network functions on OpenStack/OpenShift. 4G/5G domain expert and team mentor.",
       highlights: [
-        "Built an NF expertise-driven site-isolation tool, cutting maintenance windows by 30% and minimizing live-site downtime."
+        "Built a site-isolation tool leveraging expertise in IMS, cutting maintenance windows by 30% and minimizing live site downtime."
       ],
       tech: ["OpenStack", "5G Core", "Ansible"]
     },
@@ -59,7 +59,7 @@ const Portfolio = () => {
   ];
 
   const impactMetrics = [
-    { value: "15+", label: "large-scale clusters deployed" },
+    { value: "15+", label: "large scale clusters deployed" },
     { value: "1,500+", label: "nodes across deployments" },
     { value: "240+", label: "OpenShift clusters supported" },
     { value: "20%", label: "faster troubleshooting" },
@@ -178,7 +178,7 @@ const Portfolio = () => {
             </h1>
             <p className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-slate-300 md:text-xl">
               Cloud and network engineer building reliable telco platforms at scale.
-              <span className="font-semibold text-white"> 9+ years</span> across OpenShift, Kubernetes, and network automation.
+              <span className="font-semibold text-white"> 10+ years</span> across OpenShift, Kubernetes, and network automation.
             </p>
             
             <div className="mb-8 flex flex-wrap justify-center gap-4">
