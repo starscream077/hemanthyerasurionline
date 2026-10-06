@@ -31,6 +31,12 @@ const Portfolio = () => {
       role: "Sr Engr Cslt-Cloud",
       period: "Sep 2023 - Current",
       desc: "Building and managing large scale openshift clusters by leveraging network automations, troubleshooting tenant issues, performing RCA analysis.",
+      highlights: [
+        "Deployed 15+ large-scale clusters spanning 1,500+ nodes.",
+        "Managed and supported 240+ large-scale OpenShift clusters.",
+        "Improved troubleshooting and ticket resolution efficiency by 20% with custom Go scripts.",
+        "Built reusable MOP templates, improving accuracy and consistency while generating documents 3× faster."
+      ],
       tech: ["OpenShift", "ArgoCD", "Python"]
     },
     {
@@ -38,6 +44,9 @@ const Portfolio = () => {
       role: "Solutions Specialist",
       period: "Feb 2018 - Aug 2023",
       desc: "E2E design and deployment of network functions on OpenStack/OpenShift. 4G/5G domain expert and team mentor.",
+      highlights: [
+        "Built an NF expertise-driven site-isolation tool, cutting maintenance windows by 30% and minimizing live-site downtime."
+      ],
       tech: ["OpenStack", "5G Core", "Ansible"]
     },
     {
@@ -47,6 +56,15 @@ const Portfolio = () => {
       desc: "Design and execution of automation frameworks using Selenium and HP ALM.",
       tech: ["Selenium", "Automation", "Java"]
     }
+  ];
+
+  const impactMetrics = [
+    { value: "15+", label: "large-scale clusters deployed" },
+    { value: "1,500+", label: "nodes across deployments" },
+    { value: "240+", label: "OpenShift clusters supported" },
+    { value: "20%", label: "faster troubleshooting" },
+    { value: "3×", label: "faster MOP document generation" },
+    { value: "30%", label: "shorter maintenance windows" }
   ];
 
   const awards = [
@@ -139,38 +157,58 @@ const Portfolio = () => {
       </nav>
 
       {/* --- HERO SECTION --- */}
-      <section id="about" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      <section id="about" className="relative min-h-[calc(100vh-5rem)] flex items-center pt-24 pb-16 overflow-hidden">
         {/* Animated Background Orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-[100px] animate-pulse"></div>
-           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/30 rounded-full blur-[100px] animate-pulse delay-1000"></div>
+           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
+           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-[100px] animate-pulse delay-1000"></div>
         </div>
 
-        <div className="z-10 text-center px-4 max-w-4xl">
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-6 lg:px-10">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
-            <div className="inline-block px-4 py-1 mb-4 rounded-full border border-cyan-500/50 bg-cyan-500/10 text-cyan-300 text-xs font-bold tracking-widest uppercase">
-              Cloud & Network Engineer
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-xs font-semibold tracking-wide text-cyan-200">
+              <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+              Cloud &amp; Network Engineer <span className="text-slate-500">•</span> Hyderabad, India
             </div>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-              Hemanth <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+            <h1 className="mb-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+              Hemanth
+              <span className="mt-2 block bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400">
                 Yerasuri
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 mb-8">
-              A <span className="text-yellow-400 font-bold">Kubestronaut</span> architecting the future of Telco Cloud.
-              9+ years driving large-scale OpenShift & Network Automation.
+            <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-300 md:text-xl">
+              Cloud and network engineer building reliable telco platforms at scale.
+              <span className="font-semibold text-white"> 9+ years</span> across OpenShift, Kubernetes, and network automation.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="#experience" className="px-8 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold transition shadow-lg shadow-cyan-500/25">
-                View My Journey
+            <div className="mb-8 flex flex-wrap gap-4">
+              <a href="#experience" className="rounded-full bg-cyan-500 px-7 py-3 font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:-translate-y-0.5 hover:bg-cyan-400">
+                Explore experience
               </a>
-              <a href="/Hemanth_Yerasuri.pdf" download className="px-8 py-3 rounded-full border border-slate-600 hover:border-cyan-400 hover:text-cyan-400 transition flex items-center gap-2">
+              <a href="/Hemanth_Yerasuri.pdf" download className="flex items-center gap-2 rounded-full border border-slate-600 px-7 py-3 font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:text-cyan-300">
                 <Download size={18} /> Download Resume
               </a>
             </div>
+            <p className="text-sm text-slate-400">
+              <span className="font-semibold text-yellow-300">Kubestronaut</span>
+              <span className="px-2 text-slate-600">/</span>
+              AWS Solutions Architect
+              <span className="px-2 text-slate-600">/</span>
+              Red Hat Certified Engineer
+            </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* --- CAREER IMPACT --- */}
+      <section aria-label="Career impact" className="border-y border-slate-800 bg-slate-900/70 px-6 py-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
+          {impactMetrics.map((metric) => (
+            <div key={metric.value + metric.label} className="text-center">
+              <p className="text-2xl font-extrabold tracking-tight text-cyan-300 md:text-3xl">{metric.value}</p>
+              <p className="mx-auto mt-1 max-w-40 text-xs leading-relaxed text-slate-400">{metric.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -182,7 +220,7 @@ const Portfolio = () => {
             whileInView={{ opacity: 1 }}
             className="text-3xl font-bold text-center mb-16"
           >
-            Technical <span className="text-purple-400">Command Center</span>
+            Technical <span className="text-purple-400">Expertise</span>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -239,7 +277,7 @@ const Portfolio = () => {
       {/* --- EXPERIENCE TIMELINE --- */}
       <section id="experience" className="py-24 px-6 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">Mission Log</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">Professional Experience</h2>
           
           <div className="space-y-12 relative border-l-2 border-slate-700 ml-4 md:ml-0">
             {experience.map((job, index) => (
@@ -261,6 +299,13 @@ const Portfolio = () => {
                       <h3 className="text-xl font-bold mt-1 text-white">{job.role}</h3>
                       <h4 className="text-slate-400 mb-4">{job.company}</h4>
                       <p className="text-sm text-slate-300 leading-relaxed mb-4">{job.desc}</p>
+                      {job.highlights && (
+                        <ul className="text-sm text-slate-300 leading-relaxed list-disc pl-5 mb-4 space-y-1">
+                          {job.highlights.map((highlight) => (
+                            <li key={highlight}>{highlight}</li>
+                          ))}
+                        </ul>
+                      )}
                       <div className="flex flex-wrap gap-2">
                         {job.tech.map((t, i) => (
                           <span key={i} className="px-2 py-1 text-xs rounded bg-slate-700 text-cyan-300 border border-slate-600">
@@ -310,7 +355,7 @@ const Portfolio = () => {
       {/* --- HOBBIES & PERSONAL INTERESTS --- */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Beyond The Terminal</h2>
+          <h2 className="text-3xl font-bold mb-12">Beyond Work</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
              <HobbyCard 
